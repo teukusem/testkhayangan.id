@@ -29,24 +29,24 @@ export async function getStaticProps() {
   };
 }
 export default function Home({ servers }) {
-  const INCREMENT_COUNTER = gql`
-    mutation {
-      createServer(input: { name: "sentul", cpu: 1000, memory: 0.912, storage: 98989, uptime: 10000, status: ACTIVE, locationId: "62b295f8030f630033e8dcc9" }) {
-        name
-        status
-        cpu
-        memory
-        storage
-        uptime
-        location {
-          id
-          name
-        }
-      }
-    }
-  `;
+  // const INCREMENT_COUNTER = gql`
+  //   mutation {
+  //     createServer(input: { name: "sentul", cpu: 1000, memory: 0.912, storage: 98989, uptime: 10000, status: ACTIVE, locationId: "62b295f8030f630033e8dcc9" }) {
+  //       name
+  //       status
+  //       cpu
+  //       memory
+  //       storage
+  //       uptime
+  //       location {
+  //         id
+  //         name
+  //       }
+  //     }
+  //   }
+  // `;
 
-  const [mutateFunction, { data, loading, error }] = useMutation(INCREMENT_COUNTER);
+  // const [mutateFunction, { data, loading, error }] = useMutation(INCREMENT_COUNTER);
 
   return (
     <Container>
